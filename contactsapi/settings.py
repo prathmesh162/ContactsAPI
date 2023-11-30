@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-gd%su^+cw4k62jyr$!1r1ju@7r9$ugeffp1(nk3=bo535y%&gb'
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -135,6 +135,7 @@ USE_TZ = True
 from decouple import config
 
 JWT_SECRET_KEY = config('JWT_SECRET_KEY')
+SECRET_KEY = config('SECRET_KEY')
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
